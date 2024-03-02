@@ -87,7 +87,7 @@ func initLogger() {
 }
 
 func initDB() {
-	dsn := "user=postgres password=jansatov04 dbname=postgres sslmode=disable host=localhost port=3000"
+	dsn := "user=arman_user password=kRMJg9c9C9yAccGXXMH9ozHiWwrW6vzl dbname=arman sslmode=disable host=dpg-cnhiaden7f5s73aik7fg-a port=5432"
 	var err error
 	db, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 	if err != nil {

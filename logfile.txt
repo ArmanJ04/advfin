@@ -34,3 +34,16 @@
 {"level":"info","msg":"Received product data - Name: , Price: \n","time":"2024-03-02T17:47:02+06:00"}
 {"level":"info","msg":"Received product data - Name: , Price: \n","time":"2024-03-02T17:48:20+06:00"}
 {"level":"info","msg":"Received product data - Name: , Price: \n","time":"2024-03-02T17:51:42+06:00"}
+{"level":"info","msg":"Attempting login for email:dzhansatov00@gmail.com","time":"2024-03-02T18:43:39+06:00"}
+{"level":"info","msg":"Email sent successfully to mereke61@gmail.com","time":"2024-03-02T18:43:46+06:00"}
+{"level":"info","msg":"Email sent successfully to dzhansatov00@gmail.com","time":"2024-03-02T18:43:48+06:00"}
+{"level":"info","msg":"Email sent successfully to mereke61a@gmail.com","time":"2024-03-02T18:43:50+06:00"}
+{"level":"info","msg":"Email sent successfully to test@example.com","time":"2024-03-02T18:43:52+06:00"}
+{"level":"error","msg":"Failed to send email to : 555 5.5.2 Syntax error, cannot decode response. For more information, go to\n5.5.2  https://support.google.com/a/answer/3221692 and review RFC 5321\n5.5.2 specifications. jn13-20020a05600c6b0d00b00412b236f145sm8290657wmb.26 - gsmtp","time":"2024-03-02T18:43:53+06:00"}
+{"level":"info","msg":"Email sent successfully to john@example.com","time":"2024-03-02T18:43:55+06:00"}
+{"level":"info","msg":"Email sent successfully to john@example.com","time":"2024-03-02T18:43:56+06:00"}
+{"level":"info","msg":"Email sent successfully to john@example.com","time":"2024-03-02T18:43:58+06:00"}
+{"level":"info","msg":"Email sent successfully to john@example.com","time":"2024-03-02T18:44:00+06:00"}
+{"level":"info","msg":"Email sent successfully to john@example.com","time":"2024-03-02T18:44:02+06:00"}
+{"level":"fatal","msg":"Failed to connect to database: failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","time":"2024-03-02T18:56:28+06:00"}
+{"level":"fatal","msg":"Failed to connect to database: failed to connect to `host=port= user=password= database=sslmode=disable`: hostname resolving error (lookup port=: no such host)","time":"2024-03-02T19:01:18+06:00"}
