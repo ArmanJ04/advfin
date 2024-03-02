@@ -407,7 +407,7 @@ func sendPasswordResetEmail(email, token string) {
 	sender.SetHeader("From", "mereke61a@gmail.com") // Replace with your email address
 	sender.SetHeader("To", email)
 	sender.SetHeader("Subject", "Password Reset")
-	body := fmt.Sprintf("Click the following link to reset your password: http://localhost:8080/reset/%s", token)
+	body := fmt.Sprintf("Click the following link to reset your password: https://advfin-1.onrender.com/reset/%s", token)
 	sender.SetBody("text/html", body)
 
 	// Replace these credentials with your actual email credentials
@@ -611,7 +611,7 @@ func sendConfirmationEmail(email, token string) {
 	sender.SetHeader("From", "mereke61a@gmail.com") // Replace with your email address
 	sender.SetHeader("To", email)
 	sender.SetHeader("Subject", "Email Confirmation")
-	body := fmt.Sprintf("Click the following link to confirm your email: http://localhost:8080/confirm?token=%s", token)
+	body := fmt.Sprintf("Click the following link to confirm your email: https://advfin-1.onrender.com/confirm?token=%s", token)
 	sender.SetBody("text/html", body)
 
 	// Replace these credentials with your actual email credentials
