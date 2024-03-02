@@ -7,3 +7,30 @@
 {"level":"info","msg":"Attempting login for email:dzhansatov00@gmail.com","time":"2024-02-29T22:38:24+06:00"}
 {"level":"info","msg":"Received product data - Name: Apple, Price: 111\n","time":"2024-02-29T22:44:10+06:00"}
 {"level":"info","msg":"Product created successfully: {{25 2024-02-29 22:44:10.022426 +0600 +06 2024-02-29 22:44:10.022426 +0600 +06 {0001-01-01 00:00:00 +0000 UTC false}} Apple 111}","time":"2024-02-29T22:44:10+06:00"}
+{"level":"warning","msg":"Rate limit exceeded","time":"2024-03-01T15:50:16+06:00"}
+{"level":"info","msg":"Attempting login for email:dzhansatov00@gmail.com","time":"2024-03-01T15:50:45+06:00"}
+{"level":"info","msg":"Attempting login for email:dzhansatov00@gmail.com","time":"2024-03-01T15:51:07+06:00"}
+{"level":"info","msg":"Received product data - Name: Banana, Price: 1.21\n","time":"2024-03-01T15:51:25+06:00"}
+{"level":"info","msg":"Product created successfully: {{26 2024-03-01 15:51:25.7948376 +0600 +06 2024-03-01 15:51:25.7948376 +0600 +06 {0001-01-01 00:00:00 +0000 UTC false}} Banana 1.21}","time":"2024-03-01T15:51:25+06:00"}
+{"level":"warning","msg":"Rate limit exceeded","time":"2024-03-01T15:52:15+06:00"}
+{"level":"info","msg":"Attempting login for email:aktumar.r@gmail.com","time":"2024-03-01T15:52:34+06:00"}
+{"level":"info","msg":"Attempting login for email:aktumar.r@gmail.com","time":"2024-03-01T15:52:47+06:00"}
+{"level":"info","msg":"Attempting login for email:aktumar.r@gmail.com","time":"2024-03-01T15:52:54+06:00"}
+{"level":"info","msg":"Attempting login for email:dzhansatov00@gmail.com","time":"2024-03-01T15:55:13+06:00"}
+{"level":"info","msg":"Attempting login for email:dzhansatov00@gmail.com","time":"2024-03-01T15:56:02+06:00"}
+{"level":"warning","msg":"Rate limit exceeded","time":"2024-03-01T15:57:23+06:00"}
+{"level":"info","msg":"Attempting login for email:dzhansatov00@gmail.com","time":"2024-03-01T15:57:27+06:00"}
+{"level":"info","msg":"Received product data - Name: As, Price: 2.1\n","time":"2024-03-01T15:58:24+06:00"}
+{"level":"info","msg":"Product created successfully: {{27 2024-03-01 15:58:24.4617304 +0600 +06 2024-03-01 15:58:24.4617304 +0600 +06 {0001-01-01 00:00:00 +0000 UTC false}} As 2.1}","time":"2024-03-01T15:58:24+06:00"}
+{"level":"warning","msg":"Rate limit exceeded","time":"2024-03-01T15:59:20+06:00"}
+{"level":"info","msg":"Attempting login for email:mereke61a@gmail.com","time":"2024-03-01T16:00:53+06:00"}
+{"level":"info","msg":"Attempting login for email:dzhansatov00@gmail.com","time":"2024-03-01T16:00:57+06:00"}
+{"level":"fatal","msg":"listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.","time":"2024-03-02T17:05:33+06:00"}
+{"level":"info","msg":"Attempting login for email:dzhansatov00@gmail.com","time":"2024-03-02T17:05:34+06:00"}
+{"level":"info","msg":"Attempting login for email:dzhansatov00@gmail.com","time":"2024-03-02T17:05:38+06:00"}
+{"level":"info","msg":"Email sent successfully to mereke61@gmail.com","time":"2024-03-02T17:05:51+06:00"}
+{"level":"info","msg":"Email sent successfully to dzhansatov00@gmail.com","time":"2024-03-02T17:05:52+06:00"}
+{"level":"info","msg":"Email sent successfully to mereke61a@gmail.com","time":"2024-03-02T17:05:54+06:00"}
+{"level":"info","msg":"Received product data - Name: , Price: \n","time":"2024-03-02T17:47:02+06:00"}
+{"level":"info","msg":"Received product data - Name: , Price: \n","time":"2024-03-02T17:48:20+06:00"}
+{"level":"info","msg":"Received product data - Name: , Price: \n","time":"2024-03-02T17:51:42+06:00"}

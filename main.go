@@ -9,6 +9,7 @@ import (
 	"io"
 	"math/rand"
 	"net/http"
+	"net/smtp"
 	"os"
 	"strconv"
 	"sync"
@@ -65,9 +66,8 @@ func main() {
 	r.HandleFunc("/delete", handleUserDeletion).Methods("POST")     // For deleting a user
 	r.HandleFunc("/create1", handleProductCreation).Methods("POST") // For creating a new product
 	r.HandleFunc("/update", handleProductUpdate).Methods("POST")    // For updating a product
-	r.HandleFunc("/delete1", handleProductDeletion).Methods("POST") // For deleting a product
-
-	// Other routes...
+	r.HandleFunc("/delete1", handleProductDeletion).Methods("POST") // For deleting a produc
+	r.HandleFunc("/send_to_all", handleSendToAll).Methods("POST")
 	r.Use(rateLimitingMiddleware)
 
 	log.Fatal(http.ListenAndServe(":8080", r))
@@ -76,13 +76,14 @@ func main() {
 func initLogger() {
 	log = logrus.New()
 	log.SetFormatter(&logrus.JSONFormatter{})
+
+	// Set output to file and stdout
 	file, err := os.OpenFile("logfile.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	if err == nil {
-		log.SetOutput(file)
+		log.SetOutput(io.MultiWriter(os.Stdout, file))
 	} else {
 		log.Error("Failed to open log file:", err)
 	}
-	log.SetOutput(io.MultiWriter(os.Stdout, file))
 }
 
 func initDB() {
@@ -114,6 +115,41 @@ func rateLimitingMiddleware(next http.Handler) http.Handler {
 		lastRequestTime = time.Now()
 		next.ServeHTTP(w, r)
 	})
+}
+func handleSendToAll(w http.ResponseWriter, r *http.Request) {
+	// Parse the form values
+	r.ParseForm()
+	subject := r.FormValue("subject")
+	message := r.FormValue("message")
+
+	// Query all email addresses from the User table
+	var users []User
+	if err := db.Select("email").Find(&users).Error; err != nil {
+		log.Error("Failed to fetch emails from database:", err)
+		http.Error(w, "Failed to fetch emails from database", http.StatusInternalServerError)
+		return
+	}
+
+	// Construct the email message
+	emailBody := "Subject: " + subject + "\r\n\r\n" + message
+
+	// Set up authentication for SMTP server
+	auth := smtp.PlainAuth("", "mereke61a@gmail.com", "rire boaf odvl rsmn", "smtp.gmail.com")
+
+	// Send the email to each user
+	for _, user := range users {
+		to := []string{user.Email}
+		err := smtp.SendMail("smtp.gmail.com:587", auth, "mereke61a@gmail.com", to, []byte(emailBody))
+		if err != nil {
+			log.Errorf("Failed to send email to %s: %v", user.Email, err)
+			continue // Continue sending to the next email even if one fails
+		}
+		log.Infof("Email sent successfully to %s", user.Email)
+	}
+
+	// Response indicating the operation completed
+	w.WriteHeader(http.StatusOK)
+	w.Write([]byte("Emails sent to all users successfully"))
 }
 func handleIndex(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/login", http.StatusSeeOther)

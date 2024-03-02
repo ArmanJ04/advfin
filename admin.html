@@ -66,6 +66,16 @@
     <input type="text" id="productIdDelete" name="productIdDelete" required><br>
     <input type="submit" value="Delete Product">
 </form>
+
+<h2>Send Email to All Users</h2>
+<form action="/send_to_all" method="post">
+    <label for="subject">Subject:</label><br>
+    <input type="text" id="subject" name="subject" required><br>
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+    <input type="submit" value="Send Email">
+</form>
+
 </body>
 
 </html>
